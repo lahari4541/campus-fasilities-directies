@@ -1,0 +1,118 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#102d2a">
+  <meta name="description" content="Find campus facilities, opening hours, locations and student services in one place.">
+  <title>Campus Compass — Facilities Directory</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="site-header">
+    <a class="brand" href="#" aria-label="Campus Compass home">
+      <span class="brand-mark" aria-hidden="true">✳</span>
+      <span>campus<span class="brand-light">compass</span></span>
+    </a>
+    <nav class="nav-links" aria-label="Main navigation">
+      <a href="#directory">Directory</a>
+      <a href="#about">About</a>
+    </nav>
+    <a class="nav-cta" href="#directory">Explore campus <span aria-hidden="true">↗</span></a>
+  </header>
+
+  <main>
+    <section class="hero">
+      <div class="hero-copy">
+        <p class="eyebrow"><span class="eyebrow-dot"></span> YOUR CAMPUS, CONNECTED</p>
+        <h1>Campus life,<br><span>made easier.</span></h1>
+        <p class="hero-description">Find the places that make your college experience work — from quiet study corners to food, sports and student support.</p>
+        <a class="primary-button" href="#directory">Explore facilities <span aria-hidden="true">↓</span></a>
+        <div class="hero-note"><span class="note-icon">✓</span> One directory. Less wandering.</div>
+      </div>
+      <div class="hero-art" aria-label="Illustration of a welcoming college campus">
+        <div class="sun"></div><div class="cloud cloud-one"></div><div class="cloud cloud-two"></div>
+        <div class="campus-label label-library"><span>▤</span> Library</div>
+        <div class="campus-label label-cafe"><span>☕</span> Café</div>
+        <div class="campus-label label-sports"><span>↗</span> Sports</div>
+        <div class="tree tree-left"><i></i><b></b></div><div class="tree tree-right"><i></i><b></b></div>
+        <div class="building">
+          <div class="roof"></div><div class="building-top"><span>✳</span><span class="building-name">YOUR CAMPUS</span></div>
+          <div class="building-windows"><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i></div>
+          <div class="building-door"></div>
+        </div>
+        <div class="path"></div><div class="grass grass-one"></div><div class="grass grass-two"></div>
+        <div class="tiny-person person-one"><i></i><b></b></div><div class="tiny-person person-two"><i></i><b></b></div>
+        <div class="art-caption">A little more at home, every day.</div>
+      </div>
+    </section>
+
+    <section class="quick-stats" aria-label="Directory highlights">
+      <div><span class="stat-number" id="total-count">—</span><span class="stat-label">Listed facilities</span></div>
+      <div><span class="stat-number">01</span><span class="stat-label">Simple directory</span></div>
+      <div><span class="stat-number">24/7</span><span class="stat-label">Search whenever</span></div>
+      <p>Good campus days start with knowing where to go.</p>
+    </section>
+
+    <section class="directory-section" id="directory">
+      <div class="section-heading">
+        <div><p class="eyebrow">THE CAMPUS DIRECTORY</p><h2>Find your place.</h2><p class="section-subtitle">Search a facility or filter by what you need today.</p></div>
+        <button class="outline-button" id="open-admin" type="button"><span aria-hidden="true">＋</span> Manage facilities</button>
+      </div>
+
+      <div class="search-panel">
+        <label class="search-box" for="search-input"><span aria-hidden="true">⌕</span><input id="search-input" type="search" placeholder="Search facilities, buildings, or locations…" autocomplete="off"><kbd>⌘ K</kbd></label>
+        <label class="filter-control"><span>Category</span><select id="category-filter"><option value="All">All categories</option><option>Academic</option><option>Food &amp; Drink</option><option>Health</option><option>Sports</option><option>Student Services</option><option>Technology</option><option>Transport</option><option>Utilities</option><option>Other</option></select></label>
+        <label class="filter-control"><span>Status</span><select id="status-filter"><option value="All">Any status</option><option>Open</option><option>Limited</option><option>Closed</option></select></label>
+      </div>
+
+      <div class="results-bar"><p id="results-label">Loading campus facilities…</p><button class="text-button" id="reset-filters" type="button">Reset filters ↺</button></div>
+      <div id="message-area" class="message-area" role="status" aria-live="polite"></div>
+      <div id="facility-grid" class="facility-grid" aria-live="polite">
+        <div class="loading-card"><span class="spinner"></span><p>Finding your campus essentials…</p></div>
+      </div>
+      <div id="empty-state" class="empty-state hidden"><span class="empty-icon">⌕</span><h3>No places found</h3><p>Try another search or clear your filters.</p><button class="outline-button" id="empty-reset" type="button">Clear filters</button></div>
+    </section>
+
+    <section class="about-section" id="about">
+      <div class="about-icon">✳</div>
+      <div><p class="eyebrow">MADE FOR STUDENT LIFE</p><h2>Less searching.<br>More doing.</h2></div>
+      <p>Campus Compass keeps useful campus information together, so students can spend less time figuring out where things are and more time getting on with their day.</p>
+    </section>
+    <section class="bottom-cta"><div><p class="eyebrow">YOUR CAMPUS, AT A GLANCE</p><h2>Your next stop is<br>just a search away.</h2></div><a class="primary-button" href="#directory">Browse the directory <span aria-hidden="true">↗</span></a></section>
+  </main>
+
+  <footer><a class="brand footer-brand" href="#"><span class="brand-mark">✳</span><span>campus<span class="brand-light">compass</span></span></a><p>Built for student life. <span>© <span id="year"></span> Campus Compass</span></p></footer>
+
+  <dialog id="admin-dialog" class="admin-dialog">
+    <div class="dialog-header"><div><p class="eyebrow">DIRECTORY TOOLS</p><h2 id="form-title">Add a facility</h2></div><button class="icon-button" id="close-admin" type="button" aria-label="Close form">×</button></div>
+    <p class="dialog-help">Changes are saved to your connected Supabase database. A backend admin key is required to make changes.</p>
+    <form id="facility-form">
+      <input type="hidden" id="facility-id">
+      <div class="form-grid">
+        <label>Facility name *<input id="name" name="name" required maxlength="120" placeholder="e.g. Central Library"></label>
+        <label>Category *<select id="category" name="category" required><option value="">Choose category</option><option>Academic</option><option>Food &amp; Drink</option><option>Health</option><option>Sports</option><option>Student Services</option><option>Technology</option><option>Transport</option><option>Utilities</option><option>Other</option></select></label>
+        <label>Building *<input id="building" name="building" required maxlength="160" placeholder="e.g. Learning Centre"></label>
+        <label>Location *<input id="location" name="location" required maxlength="160" placeholder="e.g. Ground floor, Block A"></label>
+        <label class="full-width">Description *<textarea id="description" name="description" required maxlength="1200" rows="3" placeholder="What can students use this facility for?"></textarea></label>
+        <label>Opening hours<input id="opening_hours" name="opening_hours" maxlength="160" placeholder="e.g. Mon–Fri, 9 AM–5 PM"></label>
+        <label>Contact<input id="contact" name="contact" maxlength="160" placeholder="Email, extension or desk"></label>
+        <label>Accessibility<input id="accessibility" name="accessibility" maxlength="160" placeholder="Access information"></label>
+        <label>Status<select id="status" name="status"><option>Open</option><option>Limited</option><option>Closed</option></select></label>
+      </div>
+      <label class="admin-key-label">Admin write key <input id="admin-key" type="password" autocomplete="current-password" placeholder="Value of ADMIN_API_KEY" required></label>
+      <p id="form-message" class="form-message" role="status"></p>
+      <div class="form-actions"><button class="outline-button" id="cancel-form" type="button">Cancel</button><button class="primary-button" id="save-facility" type="submit">Save facility <span aria-hidden="true">↗</span></button></div>
+    </form>
+  </dialog>
+
+  <dialog id="detail-dialog" class="detail-dialog">
+    <button class="icon-button detail-close" id="close-detail" type="button" aria-label="Close details">×</button>
+    <div id="detail-content"></div>
+  </dialog>
+  <script src="script.js" defer></script>
+</body>
+</html>
